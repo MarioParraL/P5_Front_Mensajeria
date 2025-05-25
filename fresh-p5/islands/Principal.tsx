@@ -31,8 +31,8 @@ const Principal: FunctionalComponent = () => {
         "https://back-a-p4.onrender.com/contacts",
       );
       setContacts(response.data.data);
-    } catch (_e) {
-      console.error("Error en el fetch de contactos");
+    } catch (e) {
+      console.error("Error en el fetch de contactos", e);
     }
   };
 
