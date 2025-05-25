@@ -41,9 +41,10 @@ const Principal: FunctionalComponent = () => {
       const res = await Axios.get(
         `https://back-a-p4.onrender.com/messages/chat/${chatId}`,
       );
+
       setMessages(res.data.data);
-    } catch (_e) {
-      console.error("Error haciendo el fetch de mensajes");
+    } catch (e) {
+      console.error("Error haciendo el fetch de mensajes", e);
     }
   };
 
